@@ -19,7 +19,7 @@ class AnswerSerializer(serializers.ModelSerializer):
     likes = serializers.IntegerField(source='like_count', read_only=True)
     class Meta:
         model = Answer
-        fields = '__all__'
+        fields = ['id', 'content', 'author', 'creation_date', 'likes']
 
 
 '''
@@ -30,5 +30,5 @@ class QuestionSerializer(serializers.ModelSerializer):
     answers = serializers.StringRelatedField(many=True, read_only=True)
     class Meta:
         model = Question
-        fields = '__all__'
+        fields = ['id', 'content','author', 'creation_date', 'answers']
         

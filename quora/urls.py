@@ -4,7 +4,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('quora/', include('quora_app.urls')),
+    path('', include('quora_app.urls')),
     path('account/', include('user_app.api.urls'))
     
 ]
