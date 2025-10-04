@@ -21,6 +21,7 @@ class QuestionListAPIView(APIView):
         serializer = QuestionSerializer(question, many=True)
         return Response(serializer.data)
     
+    #post function to ask the questions
     def post(self, request):
         serializer = QuestionSerializer(data=request.data)
         
